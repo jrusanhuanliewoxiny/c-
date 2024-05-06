@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+int reused = 42;
+int main() {
+	int month = 9; int day = 7;
+	extern int j;//声明变量，不需要进行赋值。若进行赋值则变成定义
+	double Double = 3.14;
+	int reused = 0;
+	cout << reused << endl;//局部变量
+	cout << ::reused << endl;//显示地访问全局变量
+	int i = 100, sum = 0;
+	for (int i = 0; i != 10; i++)
+		sum += i;
+	cout << i << "\n"<<sum << endl;
+	int ival = 1024;
+	int& refVal = ival;//int &refVal是错误的，引用必须被初始化
+	refVal = 2;
+	int a = 0; int& r1 = a; double d = 0; double& r2 = d;
+	r2 = 3.1415926;
+	r2 = r1;
+	cout << r2 << endl;
+	a = r2;
+	r1 = d;
+	cout << r1 << endl;
+	int b, & ri = b;
+	b = 5; ri = 10;
+	cout << b << "\n" << ri<<"\n";
+	int c = 42;
+	int x = 22;
+	int *p = &i;
+	*p = x;//解引用符(指针）
+	cout << *p;
+	//const
+	int ii = 42;
+	const int ci = ii;
+	int jj = ci;
+}
