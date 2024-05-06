@@ -1,0 +1,26 @@
+#include<iostream>
+#include<cstddef>//size_t类型的头文件
+using namespace std;
+int v1[10];
+string b1[10];
+int main() {
+	char st[12] = "fundamental";//注意字符串的字面值最后还有个空字符
+	int v2[10];
+	string b2[10];
+	for (int i = 0; i < 10; i++) {
+		cout << v1[i] << "\n" << v2[i] << b1[i]<<"\n"<<b2[i]<<endl;
+	}
+	unsigned scores[11] = {};
+	int arr[] = { 0,1,2,3,4,5,6 };
+	int* p = arr;//指向数组的第一个元素即下标为0的
+	p++;
+	cout << *p;
+	int x[] = { 2003,2004,1997,1979,1984,2004 };
+	int* beg = begin(x);
+	int* last = end(x);
+	int* y;
+	for (y = beg; y != last; y++) {
+		cout << *y << endl;
+	}
+	return 0;
+}
