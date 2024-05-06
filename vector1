@@ -1,0 +1,47 @@
+#include<iostream>
+#include <vector>
+using namespace std;
+int main() {
+
+	vector<int> v2;
+	for (int i = 0; i <= 10; i++) {
+		int s = i * 2;
+		v2.push_back(s);
+	}
+	for (int i = 0; i <= 10; i++) {
+		cout << v2[i]<<"\n";
+	}//向vector添加元素
+	cout<< v2.size();
+
+	string word;
+	vector<string>v1;
+	for (int i = 0; i < 3; i++) {
+		cin >> word;
+		v1.push_back(word);
+	}
+	for (int i = 0; i < v1.size(); i++)
+		for (int j = 0; j < v1[i].size();j++) {
+			v1[i][j] = toupper(v1[i][j]);
+	}
+	for (int i = 0; i < v1.size(); i++) {
+		cout << v1[i] << endl;;
+	}
+	//输入字母转化为大写
+
+	int x;
+	vector<int>v3;
+	for (int i = 0; i < 10; i++) {
+		cin >> x;
+		v3.push_back(x);
+	}
+	for (int i = 0; i < 10; i = i + 2) {
+		v3[i] = v3[i] + v3[i + 1];
+		cout << v3[i] << endl;
+	}//两两相加
+	cout << "\n";
+	for (int i = 0; i < 5; i++) {
+		v3[i] = v3[i] + v3[9- i];
+		cout << v3[i] << endl;
+	}//首尾相加
+	return 0;
+}
